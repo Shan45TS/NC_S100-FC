@@ -1,0 +1,217 @@
+<jxb:bindings version="2.0"
+      xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      xmlns:gml="http://www.opengis.net/gml/3.2"
+      xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+      xmlns:annox="http://annox.dev.java.net">
+
+    <jxb:bindings schemaLocation="http://www.w3.org/1999/xlink.xsd" node="/xs:schema">
+
+        <jxb:bindings node="//xs:attributeGroup[@name='simpleAttrs']">
+            <jxb:bindings node=".//xs:attribute[@ref='xlink:title']">
+                <jxb:property name="title1"/>
+            </jxb:bindings>
+        </jxb:bindings>
+
+        <jxb:bindings node="//xs:attributeGroup[@name='extendedAttrs']">           
+            <jxb:bindings node=".//xs:attribute[@ref='xlink:title']">
+                <jxb:property name="title2"/>
+            </jxb:bindings>            
+        </jxb:bindings>
+
+        <jxb:bindings node="//xs:attributeGroup[@name='resourceAttrs']">           
+            <jxb:bindings node=".//xs:attribute[@ref='xlink:title']">
+                <jxb:property name="title3"/>
+            </jxb:bindings>            
+        </jxb:bindings>
+
+         <jxb:bindings node="//xs:attributeGroup[@name='locatorAttrs']">           
+            <jxb:bindings node=".//xs:attribute[@ref='xlink:title']">
+                <jxb:property name="title5"/>
+            </jxb:bindings>            
+        </jxb:bindings>
+
+        <jxb:bindings node="//xs:attributeGroup[@name='arcAttrs']">           
+            <jxb:bindings node=".//xs:attribute[@ref='xlink:title']">
+                <jxb:property name="title6"/>
+            </jxb:bindings>            
+        </jxb:bindings>
+
+    </jxb:bindings>  
+
+    <jxb:bindings schemaLocation="http://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd" node="/xs:schema">
+
+        <jxb:bindings node="//xs:complexType[@name='AbstractGriddedSurfaceType']">
+             <jxb:bindings node=".//xs:attribute[@name='rows']">
+                <jxb:property name="noOfRows"/>
+            </jxb:bindings>
+        </jxb:bindings>
+
+    </jxb:bindings>   
+
+    <jxb:bindings schemaLocation="http://schemas.opengis.net/gml/3.2.1/datums.xsd" node="/xs:schema">
+        <jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='secondDefiningParameter']">
+                <jxb:class name="SecondDefiningParameterPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='ellipsoid']">
+                <jxb:factoryMethod name="EllipsoidPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='primeMeridian']">
+                <jxb:factoryMethod name="PrimeMeridianPropertyElement"/>
+            </jxb:bindings>
+        </jxb:bindings>
+    </jxb:bindings>
+
+     <jxb:bindings schemaLocation="http://schemas.opengis.net/gml/3.2.1/coordinateReferenceSystems.xsd" node="/xs:schema">
+
+        <jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='userDefinedCS']">
+                <jxb:factoryMethod name="UserDefinedCSPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='cartesianCS']">
+                <jxb:factoryMethod name="CartesianCSPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='sphericalCS']">
+                <jxb:factoryMethod name="SphericalCSPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='polarCS']">
+                <jxb:factoryMethod name="PolarCSPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='linearCS']">
+                <jxb:factoryMethod name="LinearCSPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='verticalCS']">
+                <jxb:factoryMethod name="VerticalCSPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='cylindricalCS']">
+                <jxb:factoryMethod name="CylindricalCSPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='ellipsoidalCS']">
+                <jxb:factoryMethod name="EllipsoidalCSPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='affineCS']">
+                <jxb:factoryMethod name="AffineCSPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='timeCS']">
+                <jxb:factoryMethod name="TimeCSPropertyElement"/>
+            </jxb:bindings>
+
+            <jxb:bindings node="//xs:element[@name='imageDatum']">
+                <jxb:factoryMethod name="ImageDatumPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='geodeticDatum']">
+                <jxb:factoryMethod name="GeodeticDatumPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='temporalDatum']">
+                <jxb:factoryMethod name="TemporalDatumPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='engineeringDatum']">
+                <jxb:factoryMethod name="EngineeringDatumPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='verticalDatum']">
+                <jxb:factoryMethod name="VerticalDatumPropertyElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:element[@name='conversion']">
+                <jxb:factoryMethod name="ConversionPropertyElement"/>
+            </jxb:bindings>
+        </jxb:bindings>
+
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="http://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd" node="/xs:schema">
+
+        <jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiGeometryType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:geometryMember']">
+                <jxb:property name="GeometryMemberElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiGeometryType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:geometryMembers']">
+                <jxb:property name="GeometryMembersElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiPointType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:pointMember']">
+                <jxb:property name="PointMemberElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiPointType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:pointMembers']">
+                <jxb:property name="PointMembersElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiCurveType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:curveMember']">
+                <jxb:property name="CurveMemberElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiCurveType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:curveMembers']">
+                <jxb:property name="CurveMembersElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiSurfaceType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:surfaceMember']">
+                <jxb:property name="SurfaceMemberElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiSurfaceType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:surfaceMembers']">
+                <jxb:property name="SurfaceMembersElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiSolidType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:solidMember']">
+                <jxb:property name="SolidMemberElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='MultiSolidType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:solidMembers']">
+                <jxb:property name="SolidMembersElement"/>
+            </jxb:bindings>
+        </jxb:bindings>
+
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="http://schemas.opengis.net/gml/3.2.1/topology.xsd" node="/xs:schema">
+
+        <jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='TopoComplexType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:topoPrimitiveMember']">
+                <jxb:property name="TopoPrimitiveMemberElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='TopoComplexType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:topoPrimitiveMembers']">
+                <jxb:property name="TopoPrimitiveMembersElement"/>
+            </jxb:bindings>
+        </jxb:bindings>
+
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="http://schemas.opengis.net/gml/3.2.1/valueObjects.xsd" node="/xs:schema">
+
+        <jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='CompositeValueType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:valueComponent']">
+                <jxb:property name="ValueComponentElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='CompositeValueType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:valueComponents']">
+                <jxb:property name="ValueComponentsElement"/>
+            </jxb:bindings>
+        </jxb:bindings>
+
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="http://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd" node="/xs:schema">
+
+        <jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='BagType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:member']">
+                <jxb:property name="MemberElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='BagType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:members']">
+                <jxb:property name="MembersElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='AbstractFeatureCollectionType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:featureMember']">
+                <jxb:property name="FeatureMemberElement"/>
+            </jxb:bindings>
+            <jxb:bindings node="//xs:complexType[@name='AbstractFeatureCollectionType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@ref='gml:featureMembers']">
+                <jxb:property name="FeatureMembersElement"/>
+            </jxb:bindings>
+        </jxb:bindings>
+
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="http://schemas.opengis.net/gml/3.2.1/coordinateOperations.xsd">
+
+        <jxb:bindings node="//xs:element[@name='parameterValue']">
+            <jxb:factoryMethod name="xparameterValue"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='operationParameter']">
+            <jxb:factoryMethod name="xoperationParameter"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='OperationParameter']">
+            <jxb:factoryMethod name="XOperationParameter"/>
+        </jxb:bindings>
+    </jxb:bindings>
+
+</jxb:bindings>
