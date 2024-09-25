@@ -16,9 +16,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
 
 import org.json.JSONObject;
-import org.w3._1999.xlink.ActuateType;
-import org.w3._1999.xlink.ShowType;
-import org.w3._1999.xlink.TypeType;
+// import org.w3._1999.xlink.ActuateType;
+// import org.w3._1999.xlink.ShowType;
+// import org.w3._1999.xlink.TypeType;
 
 // import _int.iho.s100gml._5.CurvePropertyType;
 // import _int.iho.s100gml._5.CurveType;

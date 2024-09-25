@@ -11,8 +11,8 @@
 	<groupId>com.iic.nc</groupId>
 	<artifactId>S100</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
-	<name>S100ExchangeCatalogue</name>
-	<description>S100 Exchange Catalogue latest</description>
+	<name>S100</name>
+	<description>S100 shemas</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -127,23 +127,152 @@
 				<artifactId>maven-jaxb2-plugin</artifactId>
 				<version>0.15.3</version>
 				<executions>
-					<execution>
+					<!-- <execution>
+						<id>S100CSL</id>
 						<goals>
 							<goal>generate</goal>
 						</goals>
+						<configuration>							
+							<schemaDirectory>src/main/resources/xsd/S100/5.0.0/S100CSL/20220331</schemaDirectory>
+							<schemaIncludes>
+								<include>S100CSL.xsd</include>
+							</schemaIncludes>
+							<generateDirectory>src/main/S100/S100CSL</generateDirectory>							             
+						</configuration>	
+					</execution>	 -->
+
+					<!-- <execution>
+						<id>S100FC</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>							
+							<schemaDirectory>src/main/resources/xsd/S100/5.2.0/S100FC/20231214</schemaDirectory>
+							<schemaIncludes>
+								<include>S100FC.xsd</include>
+							</schemaIncludes>
+							<generateDirectory>src/main/S100/S100FC</generateDirectory>                
+						</configuration>	
+					</execution> -->
+
+					<!-- <execution>
+						<id>S100PC</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>							
+							<schemaDirectory>src/main/resources/xsd/S100/5.2.0/S100PC/20240415</schemaDirectory>
+							<schemaIncludes>
+								<include>S100AlertCatalog.xsd</include>
+								<include>S100AreaFill.xsd</include>
+								<include>S100LineStyle.xsd</include>
+								<include>S100Pixmap.xsd</include>
+								<include>S100PortrayalCatalog.xsd</include>
+								<include>S100Presentation.xsd</include>
+								<include>S100SVG.xsd</include>
+								<include>S100SVGMeta.xsd</include>
+								<include>S100SymbolDefinition.xsd</include>
+							</schemaIncludes>																							    
+							<generateDirectory>src/main/S100/S100PC</generateDirectory>
+						</configuration> 
+					</execution> -->
+
+					<!-- <execution>
+						<id>S100GML</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>							
+							<schemaDirectory>src/main/resources/xsd/S100/5.0.0/S100GML/20220620</schemaDirectory>
+							<schemaIncludes>
+								<include>S100_gmlProfile.xsd</include>
+								<include>S100_gmlProfileLevels.xsd</include>
+								<include>s100gmlbase.xsd</include>
+							</schemaIncludes>
+							<bindingDirectory>src/main/resources/xjb</bindingDirectory>
+							<bindingIncludes>
+								<include>link-bindings.xjb</include>
+							</bindingIncludes>							     
+							<generateDirectory>src/main/S100/S100GML</generateDirectory>							             
+						</configuration>	
+					</execution> -->
+
+					<!-- <execution>
+						<id>S100SE</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>							
+							<schemaDirectory>src/main/resources/xsd/S100/5.2.0/S100SE/20240415</schemaDirectory>
+							<schemaIncludes>
+								<include>Part15.xsd</include>
+							</schemaIncludes>
+							<bindingDirectory>src/main/resources/xjb</bindingDirectory>
+							<bindingIncludes>
+							<include>link-bindings.xjb</include>
+							</bindingIncludes>							
+							<generateDirectory>src/main/S100/S100SE</generateDirectory>                
+						</configuration>	
+					</execution> -->
+
+					<!-- <execution>
+						<id>S100IC</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>							
+							<schemaDirectory>src/main/resources/xsd/S100/5.0.0/S100IC/20220828</schemaDirectory>
+							<schemaIncludes>
+								<include>S100_IC.xsd</include>
+							</schemaIncludes>
+							<bindingDirectory>src/main/resources/xjb</bindingDirectory>
+							<bindingIncludes>
+								<include>link-bindings.xjb</include>
+							</bindingIncludes>																				    
+							<generateDirectory>src/main/S100/S100IC</generateDirectory>							             
+						</configuration>	
+					</execution> -->
+
+					<!-- <execution>
+						<id>S100Catalog</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemaDirectory>src/main/resources/xsd/S100/5.2.0/S100Catalog/20240415</schemaDirectory>
+							<schemaIncludes>
+								<include>src/main/resources/xsd/S100/5.0.0/S100Catalog/20230105/s100mds.xsd</include>
+								<include>schemas/S100/5.0.0/S100Catalog/20230105/serviceIdentification.xsd.xsd</include>
+								<include>S100_ExchangeCatalogue.xsd</include>
+							</schemaIncludes>
+							<bindingDirectory>src/main/resources/xjb</bindingDirectory>
+							<bindingIncludes>
+							<include>ec-bindings.xjb</include>
+							</bindingIncludes>
+							<generateDirectory>src/main/S100/S100Catalog</generateDirectory>                
+						</configuration>	
+					</execution> -->
+					
+					<execution>
+						<id>S100LA</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>							
+							<schemaDirectory>src/main/resources/xsd/S100/5.0.0/S100LA/20220728</schemaDirectory>
+							<schemaIncludes>
+								<include>multi_language_support.xsd</include>
+							</schemaIncludes>
+							<bindingDirectory>src/main/resources/xjb</bindingDirectory>
+							<bindingIncludes>
+								<include>link-bindings.xjb</include>
+							</bindingIncludes>																				    
+							<generateDirectory>src/main/S100/S100LA</generateDirectory>
+							<clearOutputDir>true</clearOutputDir>							             
+						</configuration>	
 					</execution>
-				</executions>
-				<configuration>          
-				<schemaDirectory>src/main/resources/xsd/S100/5.2.0/S100Catalog/20240415</schemaDirectory>
-				<schemaIncludes>
-					<include>S100_ExchangeCatalogue.xsd</include>
-				</schemaIncludes>
-				<bindingDirectory>src/main/resources/xjb</bindingDirectory>
-				<bindingIncludes>
-				<include>bindings.xjb</include>
-				</bindingIncludes>
-				<generateDirectory>src/main/S100-5.2-generated-classes</generateDirectory>                
-			</configuration>        
+				
+				</executions>							        
 			</plugin>
 		</plugins>
 	</build>
